@@ -12,10 +12,15 @@
 - Lists and Dictionaries
 - HTTP server
 - POST, GET Requests
-- SQL Queries
+- SQLite databases
 - Hash
 
+## Edit Comment
+For the 
 
+## likes 
+
+## follow
 
 # Criteria D Functionality
 https://drive.google.com/file/d/1yJgkwVwiP8M-PvNXEzWNM_IuRVJCdqkw/view?usp=drive_link
