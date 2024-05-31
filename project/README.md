@@ -1,6 +1,6 @@
 # Unit4 Raddit
 <img width="1000" alt="Screenshot 2024-05-21 at 10 31 43" src="https://github.com/ayyyane/unit4_g11/assets/142702159/774e568a-2a88-4cc0-b589-7bce96273467">
-
+**fig1** raddit image
 
 # Criteria C Development
 ## the technique used
@@ -35,11 +35,7 @@ def login():
 
     return render_template("login.html")
 ```
-The code above is the login system. To directly connect the login system when the user operates it, the route is "/". There is a login button that request.method change to POST which allows the user to send data when the button is pressed. Uname and psw are gotten value from the user input by using request.form.get method is used to access form data sent in a POST request where the name of the input is defined as "username" and "password". Create a hash to find user who has the same username as the user's input and make it run. Since the user should exist if the input is correct, use the if statement to pick only the cases where the user exists. If the user exist, next check the accuracy of the password by using check_hash() which returns True or force from the input of saved hash and input hash. If it is True, receive return the redirect method, which is used to redirect the user to a different endpoint in Flask. This is used to navigate the user to another page or URL, "main" which is main page. If the result of check_hash is False, return redirect to the url for "login" again. Also, if the request.method is not "GET", while the user doesn't press the login button, the return is render_template, which is used to render HTML templates and return them as a response to the client. The render_template function allows you to use template files, written in HTML "login.html".
-
-
-
-
+The code above is the login system. To directly connect the login system when the user operates it, the route is "/". There is a login button that request.method change to POST which allows the user to send data when the button is pressed. Uname and psw are gotten value from the user input by using request.form.get method is used to access form data sent in a POST request where the name of the input is defined as "username" and "password". Create a hash to find user who has the same username as the user's input and make it run. Since the user should exist if the input is correct, use the if statement to pick only the cases where the user exists. If the user exist, next check the accuracy of the password by using check_hash() which returns True or force from the input of saved hash and input hash. Since the hash is used instead of saving the password itself, the information is protected safety.If it is True, receive return the redirect method, which is used to redirect the user to a different endpoint in Flask. This is used to navigate the user to another page or URL, "main" which is main page. If the result of check_hash is False, return redirect to the url for "login" again. Also, if the request.method is not "GET", while the user doesn't press the login button, the return is render_template, which is used to render HTML templates and return them as a response to the client. The render_template function allows you to use template files, written in HTML "login.html".
 
 
 
@@ -58,7 +54,7 @@ comment = f"""INSERT into animes_comment(comment, date, anime_id, username, like
                    VALUES ('{input_comment}','{datetime.now()}',{anime_id},'{session["current_user"]}' ,0)"""
         print(comment)
 ```
-In Flask, sessions are used to persist data across requests from the same client. The session object allows to store information specific to a user from one request to another. For example, session["curren_user"] is defined as uname in the login function. Even though the function is different, the value is available, as you can see in see_comment_anime function. In this function, session["current_user"] is used as the username of who uses the website at that time when a query called comment is created. The Session allows for the application to recognize the value defined in a function in a different function.
+In Flask, sessions are used to persist data across requests from the same client. The session object allows to store information specific to a user from one request to another. For example, session["curren_user"] is defined as uname in the login function. Even though the function is different, the value is available, as you can see in see_comment_anime function. In this function, session["current_user"] is used as the username of who uses the website at that time when a query called comment is created. The Session allows for the application to recognize the value defined in a function in a different function, such as adding a new comment and following which both are required to insert the username who logs in.
 
 ## Edit comment
 ```.py
@@ -128,10 +124,10 @@ Another client
 ## Appendix
 
 
-**fig** Contact between developer and client for evaluation of website
+**fig2** Contact between developer and client for evaluation of website
 
 ![IMG_7F48EAB4EFB7-1](https://github.com/ayyyane/unit4_g11/assets/142702159/20298cbb-4404-4776-bda2-4e41ff57aef7)
 
-**fig** Contact between developer and client for evaluation of website
+**fig3** Contact between developer and client for evaluation of website
 
 
