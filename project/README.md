@@ -23,13 +23,21 @@ For the
 ## follow
 
 # Criteria D Functionality
-https://drive.google.com/file/d/1yJgkwVwiP8M-PvNXEzWNM_IuRVJCdqkw/view?usp=drive_link
+4 min video on the functionality of the code
+
+https://drive.google.com/file/d/1YxEGyczQcM2PgU9xevph7fZCfHdTd1ia/view?usp=drive_link
 
 
-# Criteria E Evaluation
+# Criteria E Evaluation+
+## Evaluation table
+
+## Evaluation of beta testing
+
+## Extensibility
+what kind of future extensions can be added?
 
 ## Appendix
-![CS4_Class](https://github.com/ayyyane/unit4_g11/assets/142702159/75d64061-c7e2-4fb2-b23c-374a9a130a5f)
+
 
 **fig** Contact between developer and client for evaluation of website
 
