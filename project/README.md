@@ -42,16 +42,18 @@ Client
 Another client
 | Criteria                                             | Met or not | Feedback                                             |
 |------------------------------------------------------|------------|------------------------------------------------------|
-| A login/registration system                          | Met        | OK.                                                  |
+| A login/registration system                          | Met        | It is unuseful that I couldn't see the password I typed. |
 | A posting system to EDIT/CREATE/DELETE comments.     | Met        | Great                                                |
-| A system to add/remove likes                         | Met        | OK.                                                  |
+| A system to add/remove likes                         | Met        | I love it as I can add likes as much as I push the button. I pushed likes 100 times for One Piece!!|
 | A system to follow/unfollow users, topics, or groups. | Met        | It is more convenient to follow from the comment page. |
 | A profile page with relevant information             | Met        | It is better for the user to choose a profile picture. |
 
-## Evaluation of beta testing
+
 
 ## Extensibility
-what kind of future extensions can be added?
+1. Add a show password button that allows users to switch between visible/invisible passwords to protect user information safety and improve convenience.
+2. Add options for the user to choose a profile picture.
+3. Limit the number of likes/unlikes or make a button to switch between likes and remove likes when the user presses the button. However, a client felt inconvenienced by the current button systems, while another client likes one which allows users to add likes as many as they want. Thus more considerations are needed.
 
 ## Appendix
 
@@ -62,6 +64,4 @@ what kind of future extensions can be added?
 
 **fig** Contact between developer and client for evaluation of website
 
-![IMG_1825](https://github.com/ayyyane/unit4_g11/assets/142702159/d7d2082e-2fcc-4f40-8d96-43337942ae85)
 
-**fig** Contact between developer and client regarding beta testing and feedback
