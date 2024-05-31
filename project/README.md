@@ -14,8 +14,45 @@
 - POST, GET Requests
 - SQLite databases
 - Hash
+- Flask
+  
+## Login system 
+```.py
+@app.route('/',methods=['GET','POST'])
+def login():
+    if request.method == 'POST': # means the form was submitted
+        uname = request.form.get('username')
+        psw = request.form.get('password')
+        q_hash = f"""SELECT hash FROM users where name = '{uname}'"""
+        results_hash = my_db.search(query=q_hash, multiple=False)
+        if results_hash:
+            if check_hash(results_hash[0],psw) == True
+                return redirect(url_for('main'))
+            else:
+                flash("the password is wrong","error")
+                return redirect(url_for('login'))
+        else:
+            flash("The user doesn't exist", "error")
+            return redirect(url_for('login'))
 
-## Edit Comment
+    return render_template("login.html")
+```
+The code above is the login system. To directly connect the login system when the user operates it, the route is "/". There is a login button that request.method change to POST which allows the user to send data when the button is pressed. Uname and psw are gotten value from the user input by using request.form.get method is used to access form data sent in a POST request where the name of the input is defined as "username" and "password". Create a hash to find user who has the same username as the user's input and make it run. Since the user should exist if the input is correct, use the if statement to pick only the cases where the user exists. If the user exist, next check the accuracy of the password by using check_hash() which returns True or force from the input of saved hash and input hash. If it is True, receive return the redirect method, which is used to redirect the user to a different endpoint in Flask. This is used to navigate the user to another page or URL, "main" which is main page. If the result of check_hash is False, return redirect to the url for "login" again. Also, if the request.method is not "GET", while the user doesn't press the login button, the return is render_template, which is used to render HTML templates and return them as a response to the client. The render_template function allows you to use template files, written in HTML "login.html".
+
+
+
+
+## Session
+```.py
+from flask import session
+app = Flask(__name__)
+db_name = "project.db"
+my_db = DatabaseBridge(db_name)
+app.secret_key = 'your_secret_key'
+
+
+
+```
 For the 
 
 ## likes 
