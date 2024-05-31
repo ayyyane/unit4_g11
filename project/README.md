@@ -39,21 +39,36 @@ def login():
 ```
 The code above is the login system. To directly connect the login system when the user operates it, the route is "/". There is a login button that request.method change to POST which allows the user to send data when the button is pressed. Uname and psw are gotten value from the user input by using request.form.get method is used to access form data sent in a POST request where the name of the input is defined as "username" and "password". Create a hash to find user who has the same username as the user's input and make it run. Since the user should exist if the input is correct, use the if statement to pick only the cases where the user exists. If the user exist, next check the accuracy of the password by using check_hash() which returns True or force from the input of saved hash and input hash. If it is True, receive return the redirect method, which is used to redirect the user to a different endpoint in Flask. This is used to navigate the user to another page or URL, "main" which is main page. If the result of check_hash is False, return redirect to the url for "login" again. Also, if the request.method is not "GET", while the user doesn't press the login button, the return is render_template, which is used to render HTML templates and return them as a response to the client. The render_template function allows you to use template files, written in HTML "login.html".
 
-
+## flash
+```.html
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <ul>
+      {% for category, message in messages %}
+        <li class="{{ category }}">{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+```
+Initially, the website stopped when a user got an error, which is inconvenient. Then I used flash to solve it. The code above is a part of login.html for flash method is used to send a one-time message from the backend to the front end, which can be used for displaying notifications or alerts to the user. 
 
 
 ## Session
 ```.py
 from flask import session
 app = Flask(__name__)
-db_name = "project.db"
-my_db = DatabaseBridge(db_name)
 app.secret_key = 'your_secret_key'
 
+# login()
+session["current_user"] = uname
 
-
+# see_comment_anime()
+comment = f"""INSERT into animes_comment(comment, date, anime_id, username, likes)
+                   VALUES ('{input_comment}','{datetime.now()}',{anime_id},'{session["current_user"]}' ,0)"""
+        print(comment)
 ```
-For the 
+In Flask, sessions are used to persist data across requests from the same client. The session object allows to store information specific to a user from one request to another. For example, session["curren_user"] is defined as uname in the login function. Even though the function is different, the value is available, as you can see in see_comment_anime function. In this function, session["current_user"] is used as the username of who uses the website at that time when a query called comment is created. The Session allows for the application to recognize the value defined in a function in a different function.
 
 ## likes 
 
