@@ -30,6 +30,23 @@ https://drive.google.com/file/d/1YxEGyczQcM2PgU9xevph7fZCfHdTd1ia/view?usp=drive
 
 # Criteria E Evaluation+
 ## Evaluation table
+Client
+| Criteria                                             | Met or not | Feedback                                                                 |
+|------------------------------------------------------|------------|--------------------------------------------------------------------------|
+| A login/registration system                          | Met        | It is better to add see password button which is hidden.                 |
+| A posting system to EDIT/CREATE/DELETE comments.     | Met        | Good                                                                     |
+| A system to add/remove likes                         | Met        | It is better to create a button to work both likes and remove likes. |
+| A system to follow/unfollow users, topics, or groups. | Met        | Good                                                                     |
+| A profile page with relevant information             | Met        | Good                                                                     |
+
+Another client
+| Criteria                                             | Met or not | Feedback                                             |
+|------------------------------------------------------|------------|------------------------------------------------------|
+| A login/registration system                          | Met        | OK.                                                  |
+| A posting system to EDIT/CREATE/DELETE comments.     | Met        | Great                                                |
+| A system to add/remove likes                         | Met        | OK.                                                  |
+| A system to follow/unfollow users, topics, or groups. | Met        | It is more convenient to follow from the comment page. |
+| A profile page with relevant information             | Met        | It is better for the user to choose a profile picture. |
 
 ## Evaluation of beta testing
 
